@@ -14,8 +14,14 @@ bank <- read_csv("./other/secret.csv")%>%
          )
          )%>%
   select(-`Posting Date`)%>%
-  filter(date > ymd("2018-04-13"))
+  filter(date > ymd("2018-01-01"))
 
 
 bank%>%
   summarize(total =sum(Amount))
+
+exempt <- c("Transfer|TAX|IRS|COMMERCE")
+
+bank%>%
+  filter(Amount > 0, !(str_detect(Description,exempt)),Details != "DSLIP")%>%
+  {sum(.$Amount)}

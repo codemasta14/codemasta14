@@ -69,3 +69,4 @@ new_music%>%
   select(track_uri)%>%
   add_to_playlist("Name of Playlist")
 
+r2pmml::r2pmml(rf,"randomforest.pmml")
