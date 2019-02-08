@@ -5,8 +5,7 @@ codemasta14 <- '223lztjefpjmei42fvtwd3u7a'
 
 #These are system parameters needed to have the authority to access the spotify api
 
-Sys.setenv(SPOTIFY_CLIENT_ID = '0a7bf1a593ad499492291f3a7675aef7')
-#Sys.setenv(SPOTIFY_CLIENT_SECRET = 'It\'s a secret')
+
 
 #Pulls the first playlist from my spotify account, and creates a dataframe of all the track info for the music in that playlist
 music <- get_user_playlists(codemasta14)[1,]%>%
