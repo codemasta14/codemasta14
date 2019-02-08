@@ -1,6 +1,6 @@
 library(tidyverse)
 
-cody <- read_csv(here::here("Latin/latin.csv"))
+cody <- read_csv("https://github.com/codemasta14/codemasta14/raw/master/Latin/latin.csv")
 
 clean <- cody%>%
   rename(origin = `Origin language and etymology`, affix = Affix)%>%
@@ -38,4 +38,4 @@ classify <- function(word){
 }
 
 
-classify(fibromyalgia)
+classify(pedophilia)
